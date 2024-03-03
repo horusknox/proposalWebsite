@@ -11,6 +11,7 @@
       padding: 0;
       height: 100vh;
       display: flex;
+      flex-direction: column; /* Stack elements vertically */
       justify-content: center;
       align-items: center;
       font-family: Arial, sans-serif;
@@ -18,15 +19,33 @@
       color: #ffffff;
     }
 
+    .gif-container {
+      width: 40%; /* Set GIF container width to 10% */
+      height: 0; /* Set initial height to 0 */
+      position: relative; /* Enable relative positioning for image */
+      padding-bottom: 10%; /* Maintain aspect ratio with padding-bottom */
+    }
+
+    .gif-container img {
+      position: absolute; /* Position image absolutely within container */
+      top: 0;
+      left: 0;
+      width: 100%; /* Stretch image to fill container */
+      height: 100%; /* Stretch image to fill container (maintain aspect ratio) */
+    }
+
     .message {
       text-align: center;
       font-size: 24px;
       color: #ffffff;
+      margin-top: 2rem; /* Add margin top for spacing */
     }
   </style>
 </head>
 <body>
-
+  <div class="gif-container">
+    <img src="bear hug no bg.gif" alt="Bear Hug">
+  </div>
   <h1 class="message">YAY! I KNEW IT!💓💞   See you tomorrow😍</h1>
 </body>
 </html>
